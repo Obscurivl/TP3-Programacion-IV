@@ -1,0 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+:root {
+    font-family: 'DM Sans', sans-serif;
+    color: #1f2937;
+    background: #f4f6f9;
+    font-synthesis: none;
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; }
+button, input, select, textarea { font: inherit; }
+button { border: 1px solid #d5dce5; background: #fff; color: #334155; border-radius: 8px; padding: 10px 14px; cursor: pointer; }
+button:hover { background: #f1f5f9; }
+button:focus, input:focus, select:focus, textarea:focus { outline: 2px solid #9bb8e8; outline-offset: 1px; }
+.topbar { min-height: 72px; background: #fff; border-bottom: 1px solid #e5e9ef; display: flex; align-items: center; justify-content: space-between; padding: 0 5%; gap: 20px; }
+.marca { font: 800 19px 'Manrope', sans-serif; color: #183b66; }
+.topbar nav { display: flex; align-items: center; gap: 9px; flex-wrap: wrap; }
+.topbar nav button { border: 0; }
+.primario { background: #245b91; color: white; border: 1px solid #245b91; }
+.primario:hover { background: #194873; }
+.primario.chico { padding: 9px 13px; }
+.salir { color: #a33b3b; }
+.saludo { color: #64748b; font-size: 13px; padding: 0 8px; }
+.contenedor { width: min(1400px, 92%); margin: 38px auto 60px; min-height: 65vh; }
+h1, h2 { font-family: 'Manrope', sans-serif; color: #173653; margin-top: 0; }
+h1 { font-size: clamp(27px, 4vw, 38px); margin-bottom: 8px; }
+h2 { font-size: 19px; margin-bottom: 20px; }
+p { color: #64748b; }
+.etiqueta { color: #3975a8; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 8px; }
+.bienvenida { background: #e9f0f8; border-radius: 18px; padding: clamp(35px, 8vw, 90px); max-width: 900px; margin: 55px auto; }
+.bienvenida h1 { max-width: 620px; font-size: clamp(36px, 6vw, 58px); line-height: 1.12; }
+.bienvenida p:not(.etiqueta) { font-size: 17px; margin-bottom: 28px; }
+.panel { background: #fff; border: 1px solid #e5eaf0; border-radius: 12px; padding: 24px; box-shadow: 0 5px 18px rgba(22, 44, 69, .035); }
+.auth { width: min(430px, 100%); margin: 55px auto; }
+form label, .filtros label { display: flex; flex-direction: column; gap: 7px; font-size: 13px; font-weight: 600; color: #475569; margin-bottom: 14px; }
+input, select, textarea { width: 100%; border: 1px solid #d6dee8; border-radius: 7px; padding: 10px 11px; background: #fff; color: #1f2937; min-height: 41px; }
+textarea { min-height: 41px; resize: vertical; }
+.auth form .primario { width: 100%; margin-top: 7px; }
+.ayuda { font-size: 13px; margin: 20px 0 0; }
+.link { color: #245b91; border: 0; padding: 0 5px; text-decoration: underline; }
+.encabezado { display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px; }
+.encabezado p:last-child { margin: 0; }
+.dos-columnas { display: grid; grid-template-columns: minmax(260px, 340px) minmax(0, 1fr); gap: 20px; align-items: start; }
+.formulario h2, .listado h2 { margin-bottom: 18px; }
+.acciones { display: flex; gap: 8px; margin-top: 8px; }
+.acciones-tabla { white-space: nowrap; }
+.acciones-tabla button { padding: 6px 9px; font-size: 12px; margin: 2px; }
+.peligro { color: #a33b3b; }
+.tabla-scroll { width: 100%; overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th { text-align: left; color: #64748b; font-weight: 600; background: #f8fafc; }
+th, td { padding: 12px 10px; border-bottom: 1px solid #edf0f4; white-space: nowrap; }
+td { color: #334155; }
+.vacio { background: #f8fafc; padding: 22px; border-radius: 8px; text-align: center; font-size: 14px; }
+.viaje-form { margin-bottom: 20px; }
+.rejilla-form { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 14px; }
+.rejilla-form label { min-width: 0; }
+.historial { margin-bottom: 20px; }
+.filtros { display: flex; align-items: end; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+.filtros label { min-width: 180px; margin: 0; }
+.resultado { background: #eef5fb; border-radius: 8px; padding: 14px; color: #245b91; }
+.alerta { padding: 12px 15px; border-radius: 8px; margin-bottom: 16px; font-size: 14px; }
+.exito { color: #17613e; background: #e7f5ed; }
+.error { color: #9b2c2c; background: #fdecec; }
+footer { text-align: center; border-top: 1px solid #e5e9ef; color: #94a3b8; font-size: 12px; padding: 22px; }
+@media (max-width: 1050px) {
+    .dos-columnas { grid-template-columns: 1fr; }
+    .rejilla-form { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 650px) {
+    .topbar { align-items: flex-start; flex-direction: column; padding: 17px 5%; }
+    .topbar nav { width: 100%; }
+    .contenedor { margin-top: 24px; }
+    .panel { padding: 17px; }
+    .rejilla-form { grid-template-columns: 1fr; }
+    .filtros { align-items: stretch; flex-direction: column; }
+    .filtros label { width: 100%; }
+    .bienvenida { margin: 20px auto; padding: 30px 23px; }
+}
