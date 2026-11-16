@@ -1,0 +1,39 @@
+
+@url = http://localhost:3000/api
+@token = PEGAR_TOKEN_AQUI
+
+### Listar conductores
+GET {{url}}/conductores
+Authorization: Bearer {{token}}
+
+### Crear conductor
+POST {{url}}/conductores
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "nombre": "Juan",
+  "apellido": "Pérez",
+  "numero_documento": "30111222",
+  "numero_licencia": "LIC12345",
+  "fecha_alta_licencia": "2020-01-10",
+  "fecha_vencimiento_licencia": "2030-01-10"
+}
+
+### Modificar conductor
+PUT {{url}}/conductores/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "nombre": "Juan",
+  "apellido": "Pérez",
+  "numero_documento": "30111222",
+  "numero_licencia": "LIC12345",
+  "fecha_alta_licencia": "2020-01-10",
+  "fecha_vencimiento_licencia": "2030-01-10"
+}
+
+### Eliminar conductor
+DELETE {{url}}/conductores/1
+Authorization: Bearer {{token}}

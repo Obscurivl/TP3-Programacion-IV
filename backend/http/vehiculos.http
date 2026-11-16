@@ -1,0 +1,37 @@
+
+@url = http://localhost:3000/api
+@token = PEGAR_TOKEN_AQUI
+
+### Listar vehículos
+GET {{url}}/vehiculos
+Authorization: Bearer {{token}}
+
+### Crear vehículo
+POST {{url}}/vehiculos
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "marca": "Mercedes-Benz",
+  "modelo": "Atego",
+  "patente": "AB123CD",
+  "anio": 2022,
+  "capacidad_carga": 8000
+}
+
+### Modificar vehículo (reemplazar ID)
+PUT {{url}}/vehiculos/1
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "marca": "Mercedes-Benz",
+  "modelo": "Atego 1726",
+  "patente": "AB123CD",
+  "anio": 2023,
+  "capacidad_carga": 8500
+}
+
+### Eliminar vehículo (reemplazar ID)
+DELETE {{url}}/vehiculos/1
+Authorization: Bearer {{token}}

@@ -1,0 +1,21 @@
+
+@url = http://localhost:3000/api
+
+### Registrar usuario
+POST {{url}}/auth/registro
+Content-Type: application/json
+
+{
+  "nombre": "Usuario Prueba",
+  "email": "prueba@correo.com",
+  "password": "123456"
+}
+
+### Iniciar sesión
+POST {{url}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "prueba@correo.com",
+  "password": "123456"
+}
